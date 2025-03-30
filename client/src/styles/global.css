@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "./font.css";
+
+section {
+    /* width: 100%; */
+    padding-inline: 100px;
+}
+
+@theme {
+    /* --spacing-10 */
+
+    --color-accent-background: rgba(5, 99, 153, 0.06);
+    --color-accent-foreground: rgba(5, 99, 153, 1);
+}
