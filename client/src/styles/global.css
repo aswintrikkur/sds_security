@@ -1,14 +1,42 @@
 @import "tailwindcss";
 @import "./font.css";
 
-section {
-    /* width: 100%; */
-    padding-inline: 100px;
+* {
+    font-family: var(--font-dm-sans);
 }
+
+
+section {
+    overflow-x: hidden ;
+    padding: clamp(64px, 8vw, 90px) 0;
+    padding-inline: clamp(16px, 5vw, 100px);
+}
+
+/* ---- override-inline padding ---*/
+.no-inline-padding {
+    padding-inline: 0;
+}
+
+@layer utilities {
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      scrollbar-width: none;
+    }
+  }
 
 @theme {
     /* --spacing-10 */
 
+    --color-primary-background: rgba(255, 255, 255, 1);
+    --color-primary-foreground: rgba(0, 0, 0, 1);
+
+    --color-secondary-background: rgba(0, 0, 0, 1);
+    --color-secondary-foreground: rgba(255, 255, 255, 1);
+
     --color-accent-background: rgba(5, 99, 153, 0.06);
     --color-accent-foreground: rgba(5, 99, 153, 1);
+
+    --color-accent-secondary: rgba(147, 201, 64, 1);
 }

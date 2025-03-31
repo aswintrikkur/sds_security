@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { ProductCard } from "./cards";
+//todo: THIS FILE CONTAINS 2 COROUSELS
 
 const images = [
     "/Hero_bg.png",
@@ -52,5 +54,77 @@ export const Carousel = () => {
                 })}
             </div>
         </div>
+    );
+};
+
+export const ProductCarousel = ({ productList }) => {
+    const [translateX, setTranslateX] = useState(0);
+    const cardRef = useRef(null);
+    const [cardWidth, setCardWidth] = useState(150); // Default width
+    const productCount = productList?.length;
+
+    //fetch card width
+    useEffect(() => {
+        const observer = new ResizeObserver((entries) => {
+            if (entries[0]) {
+                setCardWidth(entries[0].contentRect.width);
+            }
+        });
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => {
+            if (cardRef.current) observer.unobserve(cardRef.current);
+        };
+    }, []);
+
+    //auto scroll 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTranslateX((prev) => (prev + cardWidth) % ((productCount - 1) * cardWidth));
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [productCount, cardWidth]);
+
+
+    return (
+        <>
+            <div className="relative w-full overflow-hidden">
+                {/* Left Fade */}
+                <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+
+                {/* carousel - container */}
+                <div
+                    style={{ transform: `translateX(-${translateX}px)` }}
+                    className=" flex scrollbar-hide  justify-start gap-5  transition-transform duration-500 ease-in-out "
+                >
+                    {productList?.map((product, index) => (
+                        <div ref={index === 0 ? cardRef : null} className="" key={index}>
+                            <ProductCard data={product} />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Right Fade */}
+                <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+            </div>
+            {/* button container */}
+            <div className="absolute right-0 -bottom-12 flex gap-3  ">
+                <button
+                    className="w-10 h-10 rounded-full bg-primary-background hover:cursor-pointer"
+                    onClick={() => setTranslateX((prev) => (prev - cardWidth) % (productCount * cardWidth))}
+                >
+                    <img src="/icons/icon_back.png" alt="" className="inline" />
+                </button>
+                <button
+                    className="w-11 h-11 rounded-full bg-accent-foreground hover:cursor-pointer"
+                    onClick={() => setTranslateX((prev) => (prev + cardWidth) % (productCount * cardWidth))}
+                >
+                    <img src="/icons/icon_forward.png" alt="" className="inline" />
+                </button>
+            </div>
+        </>
     );
 };

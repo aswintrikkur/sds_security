@@ -2,7 +2,7 @@ import React from "react";
 
 export const Slider = ({ images }) => {
     return (
-        <div className="overflow-hidden w-full flex flex-col gap-8 md:gap-12  py-12 md:py-24 ">
+        <section className="overflow-hidden w-full flex flex-col gap-8  md:gap-12  no-inline-padding ">
             <h3 className="text-center  font-semibold text-gray-900 mb-6 px-6">Our Recent Clients & Partners</h3>
             <div className="relative w-full overflow-hidden">
                 <div className="flex xs:space-x-8 w-max animate-scroll">
@@ -13,6 +13,6 @@ export const Slider = ({ images }) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
