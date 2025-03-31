@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ProductCard } from "./cards";
+import { ProductCard } from "./Cards";
 //todo: THIS FILE CONTAINS 2 COROUSELS
 
 const images = [
