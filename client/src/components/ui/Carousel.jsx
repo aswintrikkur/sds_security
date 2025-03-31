@@ -80,14 +80,13 @@ export const ProductCarousel = ({ productList }) => {
         };
     }, []);
 
-    //auto scroll 
+    //auto scroll
     useEffect(() => {
         const interval = setInterval(() => {
             setTranslateX((prev) => (prev + cardWidth) % ((productCount - 1) * cardWidth));
         }, 3000);
         return () => clearInterval(interval);
     }, [productCount, cardWidth]);
-
 
     return (
         <>
@@ -98,7 +97,7 @@ export const ProductCarousel = ({ productList }) => {
                 {/* carousel - container */}
                 <div
                     style={{ transform: `translateX(-${translateX}px)` }}
-                    className=" flex scrollbar-hide  justify-start gap-5  transition-transform duration-500 ease-in-out "
+                    className=" flex justify-between w-full  overflow-x-visible md:scrollbar-hide  gap-5 transition-transform duration-500 ease-in-out "
                 >
                     {productList?.map((product, index) => (
                         <div ref={index === 0 ? cardRef : null} className="" key={index}>
@@ -110,16 +109,17 @@ export const ProductCarousel = ({ productList }) => {
                 {/* Right Fade */}
                 <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
             </div>
+
             {/* button container */}
             <div className="absolute right-0 -bottom-12 flex gap-3  ">
                 <button
-                    className="w-10 h-10 rounded-full bg-primary-background hover:cursor-pointer"
+                    className="flex justify-center items-center  w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary-background hover:cursor-pointer"
                     onClick={() => setTranslateX((prev) => (prev - cardWidth) % (productCount * cardWidth))}
                 >
                     <img src="/icons/icon_back.png" alt="" className="inline" />
                 </button>
                 <button
-                    className="w-11 h-11 rounded-full bg-accent-foreground hover:cursor-pointer"
+                    className="flex justify-center items-center  w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent-foreground hover:cursor-pointer"
                     onClick={() => setTranslateX((prev) => (prev + cardWidth) % (productCount * cardWidth))}
                 >
                     <img src="/icons/icon_forward.png" alt="" className="inline" />

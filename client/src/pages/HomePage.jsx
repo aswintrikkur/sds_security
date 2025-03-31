@@ -6,6 +6,7 @@ import { Slider } from "../components/ui/Slider";
 import { OurPromises } from "../components/Home/OurPromises";
 import { AboutSection } from "../components/Home/AboutSection";
 import { ProductSection } from "../components/Home/ProductSection";
+import { ServicesSection } from "../components/Home/ServicesSection";
 
 export const HomePage = () => {
     return (
@@ -17,6 +18,8 @@ export const HomePage = () => {
             <OurPromises />
             <AboutSection />
             <ProductSection />
+
+            <ServicesSection/>
         </RootLayout>
     );
 };

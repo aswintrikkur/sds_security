@@ -5,8 +5,8 @@ import { ProductCarousel } from "../ui/Carousel";
 export const ProductSection = () => {
     return (
         <section>
-            <div className="bg-accent-background rounded-2xl flex flex-col md:flex-row  items-center justify-between gap-8 md:gap-24 py-7 px-5 md:py-16 md:px-10 overflow-hidden">
-                <div className="md:w-5/12 ">
+            <div className="bg-accent-background rounded-2xl flex flex-col md:flex-row  items-center justify-between gap-8 md:gap-24  px-5 py-16 md:px-10 overflow-hidden">
+                <div className="w-full md:w-5/12 ">
                     <h2 className="text-accent-foreground font-medium leading-tight  mb-3">
                         Innovative Protection <span className="tracking-tight"> Explore What’s New!</span>
                     </h2>
@@ -16,7 +16,7 @@ export const ProductSection = () => {
                     </p>
                     <PrimaryButton>View All Products</PrimaryButton>
                 </div>
-                <div className="md:w-7/12 relative ">
+                <div className="w-full md:w-7/12 relative ">
                     <ProductCarousel productList={productList} />
                 </div>
             </div>
