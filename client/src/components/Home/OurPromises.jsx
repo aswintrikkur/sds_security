@@ -1,6 +1,6 @@
 import React from "react";
 import { ourPromises } from "../../data/ourPromises";
-import { PromisesCard } from "../ui/cards";
+import { PromisesCard } from "../ui/Cards";
 
 export const OurPromises = () => {
     return (
