@@ -57,7 +57,7 @@ export const Header = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <nav
-                    className="md:hidden flex flex-col items-center bg-background border-t border-border py-4"
+                    className="md:hidden flex flex-col items-center bg-background border-t border-border-primary py-4"
                     onClick={() => setIsOpen(false)}
                 >
                     {/* nav-bar for mob view */}

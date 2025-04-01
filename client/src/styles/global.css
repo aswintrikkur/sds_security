@@ -40,4 +40,6 @@ section {
     --color-accent-secondary: rgba(147, 201, 64, 1);
 
     --color-card-background: rgba(235, 243, 247, 1);
+
+    --color-border-primary: rgba(0, 0, 0, 0.3);
 }
