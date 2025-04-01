@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50  flex justify-between items-center p-6 px-24 bg-white shadow-md">
             <div className="text-2xl font-bold">
-                <img src="/images/SDS_Logo.png" alt="SDS Logo" />
+                <img src="/logo/SDS_Logo.png" alt="SDS Logo" />
             </div>
 
             {/* hamburger menu for mob-view  */}
