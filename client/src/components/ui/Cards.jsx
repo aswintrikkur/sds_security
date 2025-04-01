@@ -53,3 +53,34 @@ export const ServiceCard = ({ data, style, className }) => {
         </div>
     );
 };
+
+export const SetupCard = ({ data, color, className }) => {
+    return (
+        <div className={`px-5 py-8 md:px-8 text-start bg-card-background rounded-lg  md:w-[500px] ${className}`}>
+            <h3 className="text-6xl mb-10 opacity-20 font-bold ">{data?.number}</h3>
+            <h4 className={`mb-8  ${color == 1 ? "text-accent-foreground" : "text-accent-secondary"} `}>{data?.title}</h4>
+            <p className="opacity-80">{data?.description}</p>
+        </div>
+    );
+};
+
+export const BlogCard = ({ data, className }) => {
+    return (
+        <div className=" w-full flex flex-col-reverse md:flex-row md:justify-between gap-4   mb-10  ">
+            {/* // blog-content */}
+            <div className="text-start flex flex-col gap-4 pb-5  md:w-8/12  border-b-1 border-[rgba(0,0,0,0.2)]">
+                <Badge>{data?.tag}</Badge>
+                <h5>{data?.title}</h5>
+                <p className="opacity-50">{data?.description}</p>
+                <a className="self-start flex items-center gap-1 text-accent-foreground" href="#">
+                    Read More <img className="md:scale-110" src="/images/arrow_vector.png" alt="" />
+                </a>
+            </div>
+
+            {/* blog-image */}
+            <div className="w-full md:w-3/12">
+                <img src={data?.image} className=" w-full h-auto object-cover " alt="blog-image" />
+            </div>
+        </div>
+    );
+};

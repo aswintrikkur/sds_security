@@ -7,6 +7,9 @@ import { OurPromises } from "../components/Home/OurPromises";
 import { AboutSection } from "../components/Home/AboutSection";
 import { ProductSection } from "../components/Home/ProductSection";
 import { ServicesSection } from "../components/Home/ServicesSection";
+import { SetupSection } from "../components/Home/SetupSection";
+import { BlogSection } from "../components/Home/BlogSection";
+import { HelpSection } from "../components/Home/HelpSection";
 
 export const HomePage = () => {
     return (
@@ -14,12 +17,19 @@ export const HomePage = () => {
             <HeroSection />
 
             <Slider images={clientImages} />
-
             <OurPromises />
             <AboutSection />
             <ProductSection />
 
-            <ServicesSection/>
+            {/* // TODO: responsiveness bug on ServicesSection */}
+            <ServicesSection />
+
+            {/* // TODO: update responsiveness of vector_lines */}
+            <SetupSection />
+
+            <BlogSection />
+
+            <HelpSection />
         </RootLayout>
     );
 };
