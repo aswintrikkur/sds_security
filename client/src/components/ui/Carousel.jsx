@@ -37,6 +37,7 @@ export const Carousel = () => {
                     style={{
                         backgroundImage: `url(${image})`,
                         backgroundPositionX: window.innerWidth < 768 && "60%",
+                        // backgroundPosition: window.innerWidth < 768 ? "center right 100px" : "center right 200px",
                     }}
                 ></div>
             ))}

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Header = () => {
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50  flex justify-between items-center p-6 px-24 bg-white shadow-md">
+        <nav className="fixed top-0 left-0 right-0 z-50  flex justify-between items-center p-6 md:px-24 bg-white shadow-md">
             <div className="text-2xl font-bold">
                 <img src="/logo/SDS_Logo.png" alt="SDS Logo" />
             </div>
