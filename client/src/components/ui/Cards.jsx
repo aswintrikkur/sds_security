@@ -33,22 +33,26 @@ export const ServiceCard = ({ data, style, className }) => {
     return (
         <div
             style={style}
-            className={` ${className}  flex  flex-col-reverse md:flex-row  border-2 border-accent-background   bg-card-background  left-1/2 transform -translate-x-1/2  rounded-2xl p-5 md:pl-10 my-5 w-[90%] max-w-7xl `}
+            className={` ${className} w-full flex  flex-col-reverse md:flex-row   flex-1/2  border-2 border-accent-background   bg-card-background  left-1/2 transform -translate-x-1/2  rounded-2xl p-5 md:pl-10 my-5  `}
         >
             {/* left  */}
-            <div className=" flex flex-col items-start justify-between gap-5  md:mt-20 md:mb-10">
+            <div className=" flex flex-col md:mt-28 gap-14 min-h-full">
                 <Badge>Electronic Security</Badge>
-                <h4 className=" md:max-w-sm text-accent-foreground ">Secure Your Business With Advanced Electronic Security</h4>
-                <p className="opacity-50 md:max-w-9/12">
-                    Ensure your business’s safety with advanced security systems, real-time alerts, and HD surveillance. Our solutions
-                    provide peace of mind with remote access and professional monitoring.
-                </p>
-                <PrimaryButton>Learn More</PrimaryButton>
+                <div>
+                    <h4 className=" md:max-w-10/12 text-accent-foreground text-2xl leading-tight tracking-wide md:text-6xl mb-4">
+                        Secure Your Business With Advanced Electronic Security
+                    </h4>
+                    <p className="opacity-50 md:max-w-11/12 text-lg md:text-2xl leading-normal tracking-wide">
+                        Ensure your business’s safety with advanced security systems, real-time alerts, and HD surveillance. Our solutions
+                        provide peace of mind with remote access and professional monitoring.
+                    </p>
+                </div>
+                    <PrimaryButton className={"mt-auto mb-5"}>Learn More</PrimaryButton>
             </div>
 
             {/* right */}
-            <div className="w-full mb-5 md:mb-0  ">
-                <img src={data?.image} className="ml-auto w-full aspect-auto " alt="" />
+            <div className="h-full flex-4/3  mb-5 md:mb-0 ">
+                <img src={data?.image} className="ml-auto h-full   " alt="" />
             </div>
         </div>
     );

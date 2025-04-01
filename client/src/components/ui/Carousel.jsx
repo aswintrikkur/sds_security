@@ -14,7 +14,7 @@ export const Carousel = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+            // setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 5000);
         return () => clearInterval(interval);
     }, []);
@@ -32,10 +32,12 @@ export const Carousel = () => {
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute w-full h-full bg-cover   transition-opacity duration-1000 ${
-                        index === currentIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                    style={{ backgroundImage: `url(${image})` }}
+                    className={`absolute w-full  h-full bg-cover md:bg-center bg-no-repeat   transition-opacity duration-1000 
+                        ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
+                    style={{
+                        backgroundImage: `url(${image})`,
+                        backgroundPositionX: window.innerWidth < 768 && "60%",
+                    }}
                 ></div>
             ))}
 

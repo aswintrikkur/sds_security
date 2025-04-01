@@ -14,6 +14,7 @@ import { HelpSection } from "../components/Home/HelpSection";
 export const HomePage = () => {
     return (
         <RootLayout>
+            {/* // TODO: Bg image positioning */}
             <HeroSection />
 
             <Slider images={clientImages} />
