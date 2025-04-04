@@ -13,7 +13,8 @@ import { HelpSection } from "../components/Home/HelpSection";
 
 export const HomePage = () => {
     return (
-        <RootLayout>
+        // <RootLayout>
+        <>
             {/* // TODO: Bg image positioning */}
             <HeroSection />
 
@@ -31,6 +32,7 @@ export const HomePage = () => {
             <BlogSection />
 
             <HelpSection />
-        </RootLayout>
+        </>
+        // </RootLayout>
     );
 };

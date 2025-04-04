@@ -1,4 +1,5 @@
 import React from "react";
+import { ImageContainer } from "../ui/ImageContainer";
 
 const achievements = [
     {
@@ -25,7 +26,8 @@ export const AboutSection = () => {
                     we provide reliable protection and peace of mind for homes and businesses.
                 </span>
             </p>
-            <img className="aspect-[6/4] md:aspect-auto rounded-lg object-cover md:w-full " src="/images/conf_room.png" alt="conference room" />
+            
+            <ImageContainer src={"/images/conf_room.png"} alt="conference room" />
 
             <div className=" mt-12  flex items-center justify-center md:justify-between flex-wrap gap-10 md:gap-20 ">
                 {achievements?.map((value, index) => (

@@ -39,7 +39,7 @@ export const FooterForm = () => {
                         Issue Description
                     </label>
                     <textarea placeholder="Share more details about the issue..." name="issueDescription" id="issueDescription">
-                        description
+                        
                     </textarea>
                 </div>
             </form>

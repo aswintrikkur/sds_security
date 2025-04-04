@@ -19,8 +19,6 @@
 
 @layer base {
     h1 {
-        /* font-size: 32px; */
-        /* @apply text-3xl md:text-5xl lg:text-6xl font-bold; */
         @apply text-6xl md:text-8xl lg:text-9xl;
     }
     h2 {

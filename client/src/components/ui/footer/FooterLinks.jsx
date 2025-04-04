@@ -6,16 +6,16 @@ export const FooterLinks = () => {
     return (
         <div className=" w-full">
             {/* Top Section */}
-            <div className="flex flex-col gap-8 md:gap-80 md:flex-row  py-12 border-t border-b  border-accent-foreground/20">
+            <div className="flex flex-col gap-8  md:justify-between md:flex-row  py-12 border-t border-b  border-accent-foreground/20">
                 {/* Logo */}
-                <div className="">
-                    <img className="min-w-36" src="/logo/Brand logo.png" alt="SDS Logo" />
+                <div className="w-5/12">
+                    <img className="min-w-36" src="/logo/Brand logo.svg" alt="SDS Logo" />
                 </div>
 
                 {/* Links Section */}
-                <div className="flex-1 flex flex-wrap gap-y-10 gap-8 md:gap-12 ">
+                <div className="w-full  flex flex-wrap  gap-y-10 gap-8 justify-start md:justify-evenly ">
                     {/* Categories */}
-                    <div className=" w-full md:w-full max-w-[182px] md:max-w-[230px] text-start  pr-2 ">
+                    <div className=" w-1/3 min-w-fit max-w-[182px] md:max-w-[230px] text-start  pr-2 ">
                         <h6 className="md:text-2xl text-accent-foreground font-medium">Categories</h6>
                         <ul className="mt-6 opacity-60">
                             <li className="">Indoor</li>
@@ -25,7 +25,7 @@ export const FooterLinks = () => {
                         </ul>
                     </div>
                     {/* Company */}
-                    <div className=" w-full max-w-[182px] text-start md:max-w-[230px]  ">
+                    <div className=" w-1/3 min-w-fit max-w-[182px] text-start md:max-w-[230px]  ">
                         <h6 className="md:text-2xl text-accent-foreground font-medium">Company</h6>
                         <ul className="mt-6 opacity-60">
                             <li className="">About us</li>
@@ -35,7 +35,7 @@ export const FooterLinks = () => {
                         </ul>
                     </div>
                     {/* Contact */}
-                    <div className=" w-full max-w-[182px] text-start md:max-w-[230px]  ">
+                    <div className=" w-1/3 min-w-fit max-w-[182px] text-start md:max-w-[230px]  ">
                         <h6 className="md:text-2xl text-accent-foreground font-medium">Contact</h6>
                         <ul className="mt-6 opacity-60">
                             <li className="">Contact us</li>
