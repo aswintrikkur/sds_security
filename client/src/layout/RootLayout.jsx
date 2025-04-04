@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "../components/ui/Footer";
+import { Footer } from "../components/ui/footer/Footer";
 import { Header } from "../components/ui/Header";
 
 export const RootLayout = ({ children }) => {
