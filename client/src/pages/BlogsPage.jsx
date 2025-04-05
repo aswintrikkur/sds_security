@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-const categories = ["Bussiness", "CCTV", "Security", "Tag4"];
+import { Categories } from "../components/Blogs/Categories";
+import { blogList } from "../data/blogData";
+import { BlogCard } from "../components/ui/Cards";
+import { PaginationButtons } from "../components/ui/PaginationButtons";
+
+const categoriesList = ["Bussiness", "CCTV", "Security", "Tag4"];
 
 export const BlogsPage = () => {
-    const [selected, setSelected] = useState("All");
-
     return (
         <div>
             {/* banner */}
@@ -20,30 +23,27 @@ export const BlogsPage = () => {
                 <h2>News & Insights on Modern Security</h2>
 
                 {/* categories */}
-                <div className="flex items-center justify-between  mt-6 border-b border-border-primary h-10">
-                    <div className="flex gap-6 md:gap-8 h-full overflow-x-scroll">
-                        {["All", ...categories].map((tag, index) => (
-                            <p
-                                key={index}
-                                onClick={() => setSelected(tag)}
-                                className={`text-md md:text-lg px-2 font-medium cursor-pointer transition-opacity duration-300 ${
-                                    selected === tag ? "border-b-2 border-accent-foreground text-accent-foreground" : "opacity-60"
-                                }`}
-                            >
-                                {tag}
-                            </p>
-                        ))}
-                    </div>
+                <Categories categories={categoriesList} />
+            </section>
 
-                    <div className="h-full pl-5">
-                        <select name="filter" className="text-gray-700  outline-0 " id="filter">
-                            <option value="most-recent">Most recent</option>
-                            <option value="relevant">Relevant</option>
-                            <option value="higher-lower">Price:Higher to lower</option>
-                            <option value="lower-higher">Price:Lower to higher</option>
-                        </select>
-                    </div>
+            {/* blog lists */}
+            <section className="!pt-0 ">
+                <div className="border-b-1 border-border-primary">
+                    {[...blogList, ...blogList.reverse()]?.map((data, index, arr) => {
+                        if (index == arr.length - 1)
+                            return (
+                                <BlogCard
+                                    data={data}
+                                    key={index}
+                                    className={"md:flex-row-reverse"}
+                                    hasDate={true}
+                                    hasBorderBottom={false}
+                                />
+                            );
+                        return <BlogCard data={data} key={index} className={"md:flex-row-reverse"} hasDate={true} />;
+                    })}
                 </div>
+                <PaginationButtons />
             </section>
         </div>
     );

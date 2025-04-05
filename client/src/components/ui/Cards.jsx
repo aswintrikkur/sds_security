@@ -47,7 +47,7 @@ export const ServiceCard = ({ data, style, className }) => {
                         provide peace of mind with remote access and professional monitoring.
                     </p>
                 </div>
-                    <PrimaryButton className={"mt-auto mb-5"}>Learn More</PrimaryButton>
+                <PrimaryButton className={"mt-auto mb-5"}>Learn More</PrimaryButton>
             </div>
 
             {/* right */}
@@ -68,12 +68,15 @@ export const SetupCard = ({ data, color, className }) => {
     );
 };
 
-export const BlogCard = ({ data, className }) => {
+export const BlogCard = ({ data, className, hasDate, hasBorderBottom = true }) => {
     return (
-        <div className=" w-full flex flex-col-reverse md:flex-row md:justify-between gap-4   mb-10  ">
+        <div className={` w-full flex flex-col-reverse md:flex-row md:justify-between gap-4   mb-10  ${className}`}>
             {/* // blog-content */}
-            <div className="text-start flex flex-col gap-4 pb-5  md:w-8/12  border-b-1 border-[rgba(0,0,0,0.2)]">
-                <Badge>{data?.tag}</Badge>
+            <div className={`text-start flex flex-col gap-4 pb-5  md:w-8/12 ${hasBorderBottom && "border-b-1"}  border-[rgba(0,0,0,0.2)]`}>
+                <div className="flex w-full items-center justify-between">
+                    <Badge>{data?.tag}</Badge>
+                    {hasDate && <p className="text-xs md:text-md opacity-60 font-medium">{data?.date}</p>}
+                </div>
                 <h5>{data?.title}</h5>
                 <p className="opacity-50">{data?.description}</p>
                 <a className="self-start flex items-center gap-1 text-accent-foreground" href="#">
