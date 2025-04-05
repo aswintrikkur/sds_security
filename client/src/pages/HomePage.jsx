@@ -1,5 +1,4 @@
 import React from "react";
-import { RootLayout } from "../layout/RootLayout";
 import { HeroSection } from "../components/Home/HeroSection";
 import { clientImages } from "../data/clientImages";
 import { Slider } from "../components/ui/Slider";
@@ -13,7 +12,6 @@ import { HelpSection } from "../components/Home/HelpSection";
 
 export const HomePage = () => {
     return (
-        // <RootLayout>
         <>
             {/* // TODO: Bg image positioning */}
             <HeroSection />
@@ -33,6 +31,5 @@ export const HomePage = () => {
 
             <HelpSection />
         </>
-        // </RootLayout>
     );
 };

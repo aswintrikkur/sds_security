@@ -16,7 +16,7 @@ export const FooterForm = () => {
                     <label className="text-lg font-medium" htmlFor="fullName">
                         Full Name
                     </label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Enter your full name" />
+                    <input type="text" name="fullName" id="fullName" className="input-styled" placeholder="Enter your full name" />
                 </div>
 
                 {/* product dropdown */}
@@ -24,7 +24,7 @@ export const FooterForm = () => {
                     <label htmlFor="products" className="text-lg font-medium">
                         Select Product
                     </label>
-                    <select name="products" className="text-gray-500" id="products">
+                    <select name="products" className="text-gray-500 select-styled" id="products">
                         <option value="nil">Choose the product facing an issue</option>
                         <option value="product1">product1</option>
                         <option value="product2">product2</option>
@@ -34,11 +34,11 @@ export const FooterForm = () => {
                 </div>
 
                 {/* Issue description */}
-                <div className="flex flex-col gap-2 text-start">
+                <div className="flex flex-col gap-2 text-start ">
                     <label htmlFor="issueDescription" className="text-lg font-medium">
                         Issue Description
                     </label>
-                    <textarea placeholder="Share more details about the issue..." name="issueDescription" id="issueDescription">
+                    <textarea className="textarea-styled" placeholder="Share more details about the issue..." name="issueDescription" id="issueDescription">
                         
                     </textarea>
                 </div>
