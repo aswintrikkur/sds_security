@@ -9,11 +9,11 @@ import { exploreSolutions } from "../data/solutionsList";
 
 export const AboutPage = () => {
     return (
-        <>
-            <section>
+        <div className="relative  ">
+            <section className="h-screen flex justify-between items-center relative">
                 {/* section-title */}
                 <SectionTitle
-                    className={"md:max-w-10/12 mb-0 relative"}
+                    className={"md:max-w-10/12  relative"}
                     title={"Electronic, Cyber & Manpower Security Experts"}
                     description={"Leading Bangalore-based security solutions provider offering electronic, cyber, and manpower security."}
                     descWidth={"md:max-w-8/12"}
@@ -76,6 +76,11 @@ export const AboutPage = () => {
                     </Link>
                 </SectionTitle>
             </section>
-        </>
+
+            {/* get-in-touch */}
+            <div className=" absolute  -z-10 bottom-0 left-1/2 -translate-x-1/2 ">
+                <h1 className="huge-faded-text text-nowrap ">Get In Touch</h1>
+            </div>
+        </div>
     );
 };
