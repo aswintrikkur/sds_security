@@ -1,5 +1,10 @@
 import React from "react";
+import { HeroCarousel } from "../components/Product/HeroBanner";
 
 export const ProductsPage = () => {
-  return <div>ProductsPage</div>;
+    return (
+        <div>
+            <HeroCarousel />
+        </div>
+    );
 };

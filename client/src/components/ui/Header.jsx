@@ -6,8 +6,8 @@ export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 left-0 right-0 z-50   bg-white shadow-md">
-            <div className="flex justify-between items-center p-6 md:px-24">
+        <header className="sticky top-0 left-0 right-0 z-50    bg-white shadow-md">
+            <div className="flex justify-between items-center h-[72px] p-[10px]  md:px-24">
                 <div className="text-2xl font-bold">
                     <Link to={"/"}>
                         <img src="/logo/SDS_Logo.svg" alt="SDS Logo" />
@@ -27,7 +27,7 @@ export const Header = () => {
                 </div>
 
                 {/* nav-bar for Desktop view */}
-                <div className="hidden md:flex space-x-6">
+                <div className="hidden md:flex text-lg space-x-6">
                     <Link to={"/products"} className="text-accent-foreground hover:text-black">
                         Product
                     </Link>
@@ -60,7 +60,7 @@ export const Header = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <nav
-                    className="md:hidden flex flex-col items-center bg-background border-t border-border-primary py-4"
+                    className="md:hidden flex flex-col text-lg items-center bg-background border-t border-border-primary py-4"
                     onClick={() => setIsOpen(false)}
                 >
                     {/* nav-bar for mob view */}
@@ -97,3 +97,5 @@ export const Header = () => {
         </header>
     );
 };
+
+
