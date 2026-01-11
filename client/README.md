@@ -1,12 +1,96 @@
-# React + Vite
+# 🔐 SDS Security – E-commerce Platform for Security Cameras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
 
-Currently, two official plugins are available:
+**SDS Security** is a client-based **e-commerce platform** built for selling a wide range of **security cameras**.  
+The platform allows customers to explore, compare, and purchase security camera solutions suitable for **residential**, **commercial**, and **industrial** use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The goal of this project is to provide a **simple, reliable, and scalable online shopping experience** for security surveillance products.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Key Features
+
+- 🛒 **Product Catalog**
+  - Residential security cameras
+  - Commercial surveillance solutions
+  - Industrial-grade security systems
+
+- 🔍 **Product Discovery**
+  - Category-based browsing
+  - Detailed product descriptions and specifications
+  - Clear use-case guidance for customers
+
+- 🧾 **E-commerce Functionality**
+  - Add to cart
+  - Checkout flow
+  - Order placement
+
+- 👤 **Customer Experience**
+  - Easy navigation
+  - Mobile-friendly design
+  - Secure purchase process
+
+---
+
+## 🧠 Project Planning Approach
+
+This project follows a **structured and scalable development approach**, focusing on:
+
+- Clear separation of business logic and UI
+- Scalable product and category modeling
+- Future-ready architecture for adding:
+  - New product types
+  - Advanced filtering
+  - Inventory and order management
+
+---
+
+## 🛠️ Tech Stack
+
+> _(Update this section based on your actual implementation)_
+
+- **Frontend:** React / Next.js  
+- **Styling:** Tailwind CSS / ShadCN  
+- **Backend:** Node.js, Express  
+- **Database:** MongoDB  
+- **Authentication:** JWT-based authentication  
+- **Payments:** To be integrated (client specific)
+
+---
+
+## 📂 Core Modules
+
+### Customer Module
+- Browse products
+- View product details
+- Place orders
+
+### Admin Module
+- Manage products
+- Manage categories
+- Order management
+
+---
+
+## 🚀 Future Enhancements
+
+- Advanced product filtering (resolution, night vision, storage, etc.)
+- Product comparison feature
+- Reviews & ratings
+- Installation service requests
+- Analytics dashboard for admins
+
+---
+
+## 📄 Project Status
+
+- ✅ Client Project  
+- 🚧 Actively developed and maintained based on client requirements
+
+---
+
+## 🤝 Client
+
+**SDS Security**  
+Security camera solutions for residential and industrial surveillance needs.
